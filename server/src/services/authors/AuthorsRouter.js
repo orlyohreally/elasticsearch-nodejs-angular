@@ -1,12 +1,14 @@
 import { Router } from "express";
 
+const asyncHandler = require("express-async-handler");
+
 export class AuthorsRouter {
   constructor({ service }) {
     this.router = Router();
     this.service = service;
 
-    this.router.get("/authors/", this.getAuthors.bind(this));
-    this.router.post("/authors/", this.createAuthor.bind(this));
+    this.router.get("/authors/", asyncHandler(this.getAuthors.bind(this)));
+    this.router.post("/authors/", asyncHandler(this.createAuthor.bind(this)));
   }
 
   async getAuthors(req, res, next) {
