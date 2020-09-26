@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Application with MEAN stack with integrated elasticsearch",
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "start": "node ./dist-server/main.js",
+    "dev": "npm run build && npm run start",
+    "transpile": "babel ./src --out-dir dist-server",
+    "clean": "rimraf dist-server"
+  },
+  "author": "Orly Knop",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "http-errors": "^1.8.0",
+    "joi": "^17.2.1",
+    "mongoose": "^5.10.4"
+  }
+}
