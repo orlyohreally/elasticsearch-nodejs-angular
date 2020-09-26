@@ -1,4 +1,3 @@
-require("dotenv").config();
 import mongoose from "mongoose";
 const express = require("express");
 import * as bodyParser from "body-parser";

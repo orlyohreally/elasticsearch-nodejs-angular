@@ -4,7 +4,7 @@
   "description": "Application with MEAN stack with integrated elasticsearch",
   "scripts": {
     "build": "npm run clean && npm run transpile",
-    "start": "node ./dist-server/main.js",
+    "start": "node --require dotenv/config ./dist-server/main.js",
     "dev": "npm run build && npm run start",
     "transpile": "babel ./src --out-dir dist-server",
     "clean": "rimraf dist-server"
