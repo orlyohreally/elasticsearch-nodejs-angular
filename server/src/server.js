@@ -13,7 +13,6 @@ export const runServer = async (port, mongoUri) => {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
-    useUnifiedTopology: true,
   });
 
   const apiPath = "/api/v1";
